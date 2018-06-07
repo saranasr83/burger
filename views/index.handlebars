@@ -1,4 +1,31 @@
-<h1>EAT DA BURGER</h1>
-{{#each items}}
-<p>{{burger_name}}</p>
-{{/each}}
+<img src="assets/img/burger.jpg" alt="burger">
+<h1>EAT-DA-BURGER!</h1>
+
+
+<ul>
+    {{#each burgers}} 
+    {{#unless devoured}} 
+    {{> burger/burger-block devoured=true}}
+    {{/unless}} {{/each}}
+</ul>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}} 
+    {{> burger/burger-block devoured=false}} 
+    {{/if}} {{/each}}
+</ul>
+
+<div class="container">
+    <form class="form">
+
+        <div class="form-group">
+            <label for="exampleInputPassword1"></label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <p class="p1">Enter a burger you want to eat. click the "submit" button</p>
+</div>
