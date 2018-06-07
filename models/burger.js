@@ -1,4 +1,5 @@
 // Import the ORM to create functions that will interact with the burger database.
+//create the code that will call the ORM functions using burger specific input for the ORM.
 var orm = require("../config/orm.js");
 
 var burger = {
@@ -8,14 +9,14 @@ var burger = {
         });
     },
 
-    create: function (objCondition, cb) {
-        orm.create("burgers", objCondition, function (res) {
+    create: function (cols, vals, cb) {
+        orm.create("burgers", cols, vals, function (res) {
             cb(res);
 
         });
     },
-    update: function(objCondition, objUpdate, cb) {
-        orm.update("burgers", objCondition, objUpdate, function(res) {
+    update: function(objColVals, objCondition, cb) {
+        orm.update("burgers", objColVals, objCondition, function(res) {
             cb(res);
         });
     }
