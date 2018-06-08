@@ -34,3 +34,10 @@ img{
     width: 250px;
     margin-top: -30px;
 }
+.burger-name{
+    font-weight: bold;
+    font-size: 20px; 
+    background-color: rgb(9, 100, 9);
+    width: 250px;
+    padding: 10px;
+}

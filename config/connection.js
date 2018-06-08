@@ -2,6 +2,9 @@
 var mysql = require("mysql");
 var connection;
 
+var JAWSDB_URL = "mysql://alhm060vtxf3pne1:hlaefuu7mby84ckw@j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/dl9r4lafopi5kofl"
+
+
 if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -10,7 +13,7 @@ if(process.env.JAWSDB_URL){
   port: 3306,
   user: "root",
   password: "password",
-  database: "burger_db"
+  database: "burgers_db"
 });
 }
 

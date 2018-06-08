@@ -2,17 +2,18 @@
 <h1>EAT-DA-BURGER!</h1>
 
 
-<ul>
+<ul id="toEat">
     {{#each burgers}} 
     {{#unless devoured}} 
-    {{> burger/burger-block devoured=true}}
+    {{> burger/burger-block devoured=false}}
+   
     {{/unless}} {{/each}}
 </ul>
 
-<ul>
+<ul id="eaten">
     {{#each burgers}}
     {{#if devoured}} 
-    {{> burger/burger-block devoured=false}} 
+    {{> burger/burger-block devoured=true}} 
     {{/if}} {{/each}}
 </ul>
 
@@ -21,10 +22,10 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1"></label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+            <input type="text" class="form-control" id="newburgername" placeholder="burger details">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit-burger">Submit</button>
     </form>
 
     <p class="p1">Enter a burger you want to eat. click the "submit" button</p>
